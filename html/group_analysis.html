@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Group Name Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../html/index.html"><img src="../images/peacelogo.jpg" alt="Peace Logo"style="width:35px; height:25px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">Home</a></li>
+        <li><a href="./country_analysis.html">Country Analysis</a></li>
+        <li><a href="./terrorist_attack.html">Terrorist Attack Map</a></li>
+        <li><a href="./group_analysis.html">Group Analysis</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> 
+      <h1>Group Name Analysis</h1>
+      <p>In this analysis we used the GTD from 2014 to 2017. This included over 56,000 terrorist attacks. We wanted to create models to identify which terrorist groups carried out an attack based on a multitude of factors. This is important for several reasons:
+      <ol>
+        <li>
+            In order to respond to a terrorist attack and thwart a group, a government must be able to identify it.
+        </li>
+        <br>
+        <li>
+            In the status quo it is incredibly difficult to identify which terrorist group carried out an attack. In this dataset, over 25,000 attacks occurred where the attacking group was not able to be identified.
+        </li>
+        <br>
+        <li>
+            Finally, terrorist groups are notorious for claiming attacks they had nothing to do with. Groups have an incentive to do this because it makes them seem more dangerous and effective, which bolsters their influence.
+        </li>
+      </ol>
+      <br>
+      <p>The independent variables considered were: <strong>attack type</strong>, <strong>weapon type</strong> used in the attack, <strong>the target</strong>, 
+        the <strong>number of casualties</strong>, and <strong>the country</strong> the attack occurred in.
+      <br><br>
+      The output variables were the 50 groups that have carried out the most attacks.
+      <br>
+      <br>The first model was a <strong>logistic regression model</strong>.
+      <br>Training Data Score: 0.8119875914026147
+      <br>Testing Data Score: 0.7916251246261217
+      <br><br>
+      <br>The second model was an <strong>SVM</strong>.
+      <br>Loss: 0.0044
+      <br>Accuracy: 0.8502
+      <br><br>
+      These results show that these models can predict the group responsible for an attack at fairly high accuracy. These models can be corroborated with existing intelligence to better inform decision makers about which groups are most active.</p>
+      </p>
+      <br>
+      <img src="../images/epochs.png" class="img-thumbnail" id = "medium">
+      <img src="../images/epochs2.png" class="img-thumbnail" id = "medium">
+      <hr>
+      <div></div>
+      <div class='tableauPlaceholder' id='viz1563421338378' style='position: relative'><noscript><a href='#'>
+        <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NK&#47;NKHQJCZC3&#47;1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' /> 
+          <param name='path' value='shared&#47;NKHQJCZC3' /> 
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NK&#47;NKHQJCZC3&#47;1.png' /> 
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
+        <script src="../js/tableau2.js"></script>
+    </div>
+    <div class="col-sm-4 sidenav">
+      <div class="well">
+        <img src="../images/nametag.jpg" class="img-thumbnail" alt="un">
+      </div>
+      <div class="well">
+        <img src="../images/peoplecolor.jpg" class="img-thumbnail" alt="pulwama">
+      </div>
+      <div class="well">
+          <img src="../images/edu_terr2.jpg" class="img-thumbnail" alt="pulwama">
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer footer class="container-fluid">
+  <p></p>
+</footer>
+</body>
+</html>
+
+<!-- Policy makers to reduce terrorism, education, economics, military spending, which is the most expensive,
+what is the way to solve terrorism. Attack lvl, which groups are the most active and identity factors that 
+help us with the response of the groups.
+
+All we are doing is to explain the terrorist behavior and find the models to predict
+War on terrorism has been going on since 2001
+Trillions of dollars of debt but not all of it is going into counter-terroristm
+
+Title: Analyzing Terrorism Trends
+
+Create models to augment the world, using intelligence to write a story. Inform it using data driven models
+r2, epochs
+-->

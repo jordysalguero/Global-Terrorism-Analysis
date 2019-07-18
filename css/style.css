@@ -1,0 +1,51 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.bg-4 { 
+    background-color: #2f2f2f;
+    color: #ffffff;
+  }
+
+  footer {
+    background-color: #555;
+    color: white;
+    padding: auto;
+  }
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 750px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height: auto;} 
+  }
+
+  #unitednations {
+    height: 350px;
+    width: 350px;
+  }
+
+  #concol {
+    height: auto;
+  }
+
+  #small {
+    height: 200px;
+    width: auto;
+  }
+
+  #medium {
+    height: 400px;
+    width: auto;
+  }

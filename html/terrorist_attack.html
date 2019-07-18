@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Visualizing Global Terrorism</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/final-project.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="../html/index.html"><img src="../images/peacelogo.jpg" alt="Peace Logo"style="width:35px;height:25px;"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./country_analysis.html">Country Analysis</a></li>
+            <li><a href="./terrorist_attack.html">Terrorist Attack Map</a></li>
+            <li><a href="./group_analysis.html">Group Analysis</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-8 text-left"> 
+          <div class="page">
+              <div class="row header">
+                  <h1>Worldwide Terrorist Attacks</h1>
+                  <span class="subtitle">1996 - 2013</span>
+              </div>
+              <div class="row">
+                  <div>
+                      <p><b>Note: You may need to wait several seconds for the visualization to load.</b></p>
+                      <p>This visualization investigates global terrorism from 1996 to 2013. Each dot represents a terrorist
+                          attack in which there was at least one victim. The size of each dot is proportional to the number of
+                          victims: the largest and smallest points represent 1,500 and 1 people respectively. The color of each
+                          dot corresponds to one of eight attack types. The data can be filtered by year and by type of attack so
+                          that only the desired points are displayed. Updating the years will also update the line chart.
+                          Use the "Animate" button to see the evolution of attacks over the selected time period.
+                          The map can be navigated by clicking and dragging as well as scrolling to zoom. The color scale is
+                          uniform throughout all three visualizations.</p>
+                  </div>
+              </div>
+              <div id="container"></div>
+              <div class="row interactive">
+                  <div>
+                      <form onsubmit="return false;" method="post" id="yearRange" class="yearForm">
+                          <div class="field">
+                              <label>Start Year:</label>
+                              <input type="text" id="startYear" value="1996">
+                          </div>
+                          <div class="field">
+                              <label>End Year:</label>
+                              <input type="text" id="endYear" value="2013">
+                          </div>
+                          <button type="submit" value="Update">Update</button>
+                      </form>
+                  </div>
+                  <div class="animation">
+                      <div>
+                          <p><b>Current Year:</b> <span id="cYear"></span></p>
+                      </div>
+                      <div>
+                          <button id="animate" type="button">Animate</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="row legends">
+                  <div id="legend-column">
+                      <svg id="legend" width="300" height="300"></svg>
+                  </div>
+                  <div class="sizeLegend">
+                      <svg id="legendSize" width="200" height="300"></svg>
+                  </div>
+                  <div class="">
+                      <div id="AttackDiv" class="radio-toolbar">
+                          <span><b>Attack Type</b></span>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <svg id="line-chart" width="960" height="900"></svg>
+              </div>
+              <div>
+                  <svg id="bar-chart" width="960" height="900"></svg>
+              </div>
+          </div>
+          
+      </div>
+      <div class="col-sm-4 sidenav" id = "concol">
+          <div class="well">
+            <a href="country_analysis.html"></a><img src="../images/heart_bandaid.jpg" class="img-thumbnail" alt="heart_bandaid">
+          </div>
+          <div class="well">
+                <a href="country_analysis.html"></a><img src="../images/soldier.jpg" class="img-thumbnail" alt="eduimg2">
+            </div>
+          <div class="well">
+            <a href="country_analysis.html"></a><img src="../images/gti.png" class="img-thumbnail" alt="eduimg2">
+          </div>
+
+    </div>
+</div>
+
+<script src="./assets/js/jquery-3.2.1.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="./assets/js/topojson.v2.js"></script>
+<script src="./assets/js/final-project.js"></script>
+<script src="./assets/js/d3-legend.js"></script>
+</body>
+</html>
